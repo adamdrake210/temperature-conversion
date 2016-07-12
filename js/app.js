@@ -12,9 +12,21 @@ $(document).ready(function () {
         return (F - 32) * 5/9;
     }
 
+    $('#submitButton').click(function () {
 
+        F = startbound;
+        do
+        {
+            C = getC(F);
+            console.log(C, F);
+            
+            F = F + increment;
+        } while (F < endbound)
+
+
+        $('#details').html(C);
+
+    });
     
-
-
 
 });
