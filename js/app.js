@@ -23,14 +23,14 @@ $(document).ready(function () {
 
         F = startbound;
         htmlout = '<table class="table table-striped">';
-        htmlout = htmlout + "<thead><tr><th>Celsius</th><th>Fahrenheit</th></tr></thead>";
+        htmlout = htmlout + "<thead><tr><th>Fahrenheit</th><th>Celsius</th></tr></thead>";
 
         do
         {
             htmlout = htmlout + "<tr>";
             C = getC(F);
-            htmlout = htmlout + "<td>" + Math.round(C.toString() * 100) / 100 + "</td>";
             htmlout = htmlout + "<td>" + F.toString() + "</td>";
+            htmlout = htmlout + "<td>" + Math.round(C.toString() * 100) / 100 + "</td>";
 
             console.log(C, F);
             F = F + increment;
